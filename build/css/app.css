@@ -363,7 +363,7 @@ h3 {
 }
 @media (width >= 768px) {
   .header {
-    padding: 3.125rem 0;
+    padding: 1.875rem 0;
   }
 }
 .header__logo {
@@ -448,22 +448,25 @@ h3 {
 .navegacion__menu {
   background-color: tomato;
   position: absolute;
-  opacity: 0;
-  top: 5.625rem;
-  bottom: 0;
+  top: 91px;
+  bottom: 250px;
   left: 0;
   right: 0;
   width: 95%;
   margin: 0 auto;
   padding: 10%;
   overflow: hidden;
-  transition-property: all;
-  transition-duration: 300ms;
-  transition-timing-function: ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 300ms ease-in-out, visibility 300ms, -webkit-transform 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out, visibility 300ms;
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out, visibility 300ms, -webkit-transform 300ms ease-in-out;
 }
 .navegacion__menu--activo {
   opacity: 1;
-  display: block;
+  visibility: visible;
+  pointer-events: auto;
 }
 .navegacion__item {
   margin-bottom: 1.125rem;
@@ -478,6 +481,7 @@ h3 {
 @media (width >= 768px) {
   .navegacion__menu {
     opacity: 1;
+    visibility: visible;
     position: static;
     display: flex;
     gap: 1rem;
@@ -491,4 +495,81 @@ h3 {
   .navegacion__link {
     width: auto;
   }
+}
+
+.hero__background {
+  height: calc(100vh - 101.39px);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(/build/assets/images/inicio.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.hero__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero__contenido {
+  margin-bottom: 2rem;
+}
+.hero__titulo {
+  font-weight: 400;
+  color: #FDFDFD;
+  font-size: 2.25rem;
+}
+@media (width >= 768px) {
+  .hero__titulo {
+    font-size: 2.5rem;
+  }
+}
+.hero__nombre {
+  font-family: "Dancing Script", cursive;
+}
+.hero__rol {
+  font-weight: 700;
+  display: block;
+  text-transform: uppercase;
+}
+.hero__acciones {
+  display: flex;
+  gap: 1.125rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (width >= 768px) {
+  .hero__acciones {
+    flex-direction: row;
+  }
+}
+.hero__link {
+  background-color: #3F24B2;
+  font-size: 1rem;
+  padding: 0.75rem 1.375rem;
+  border-radius: 0.3125rem;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #FDFDFD;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+.hero__link:hover {
+  cursor: pointer;
+  background-color: rgb(52.29, 29.88, 147.74);
+}
+@media (width >= 768px) {
+  .hero__link {
+    width: auto;
+  }
+}
+.hero__link--icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
