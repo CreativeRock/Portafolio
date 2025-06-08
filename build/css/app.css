@@ -499,7 +499,7 @@ h3 {
 
 .hero__background {
   height: calc(100vh - 101.39px);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(/build/assets/images/inicio.avif);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../assets/images/inicio.avif);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
