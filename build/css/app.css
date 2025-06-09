@@ -851,6 +851,8 @@ img {
   position: relative;
 }
 .project__images-slide {
+  height: 400px;
+  width: 100%;
   display: flex;
   aspect-ratio: 1/1;
   overflow-x: auto;
@@ -870,7 +872,7 @@ img {
   display: flex;
   gap: 16px;
   position: absolute;
-  bottom: -12px;
+  bottom: 25px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
