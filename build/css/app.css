@@ -753,3 +753,131 @@ img {
   width: auto;
   height: 50px;
 }
+
+.portfolio {
+  background-color: #FB97A4;
+  padding: 3.125rem 0;
+  color: #FDFDFD;
+}
+.portfolio__title {
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (width >= 768px) {
+  .project {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    align-items: center;
+  }
+}
+.project__title {
+  text-transform: uppercase;
+}
+.project__description {
+  line-height: 1.6;
+}
+.project__tech-list {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.project__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  gap: 22px;
+}
+@media (width >= 768px) {
+  .project__links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 22px;
+  }
+}
+.project__link {
+  width: 100%;
+  background-color: #E33963;
+  color: #FDFDFD;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 300ms ease;
+}
+.project__link:hover {
+  cursor: pointer;
+  background-color: rgb(211.4920353982, 29.9079646018, 74.7699115044);
+}
+@media (width >= 768px) {
+  .project__link {
+    width: auto;
+  }
+}
+
+.project__gallery {
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left center;
+     object-position: left center;
+  position: relative;
+}
+.project__images-wrapper {
+  position: relative;
+}
+.project__images-slide {
+  display: flex;
+  aspect-ratio: 1/1;
+  overflow-x: auto;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  border-radius: 8px;
+}
+.project__image {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.project__gallery-nav {
+  display: flex;
+  gap: 16px;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 10;
+}
+.project__gallery-nav-button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #E33963;
+  opacity: 0.5;
+  transition: opacity ease 300ms;
+}
+.project__gallery-nav-button:hover {
+  opacity: 1;
+}
+.project__gallery-nav-button--active {
+  opacity: 1;
+  scale: 1.1;
+}
