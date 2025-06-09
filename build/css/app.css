@@ -351,6 +351,11 @@ h3 {
   font-size: 32px;
 }
 
+img {
+  width: 100%;
+  display: block;
+}
+
 .text-center {
   text-align: center;
 }
@@ -446,7 +451,6 @@ h3 {
 }
 
 .navegacion__menu {
-  background-color: tomato;
   position: absolute;
   top: 91px;
   bottom: 250px;
@@ -498,7 +502,7 @@ h3 {
 }
 
 .hero__background {
-  height: calc(100vh - 101.39px);
+  height: 100vh;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../assets/images/inicio.avif);
   background-size: cover;
   background-repeat: no-repeat;
@@ -572,4 +576,180 @@ h3 {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+}
+
+.about {
+  background-color: #C19FFB;
+  padding: 100px 0;
+}
+
+.about__section--profile {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 6.25rem;
+}
+@media (width >= 768px) {
+  .about__section--profile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+.about__text {
+  color: #222222;
+}
+.about__title {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.about__description {
+  line-height: 1.6;
+}
+.about__image-wrapper {
+  height: 250px;
+  width: 250px;
+  border-radius: 100%;
+  border: 5px solid #FDFDFD;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.about__image {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.about__section--tech {
+  margin-bottom: 6.25rem;
+}
+@media (width >= 768px) {
+  .about__section--tech {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+.about__text--tech {
+  margin-bottom: 75px;
+}
+.about__subtitle {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.about__icons-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.about__icons-wrapper::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(to left, rgba(193, 159, 251, 0), rgb(193, 159, 251));
+  content: " ";
+  z-index: 10;
+}
+@media (width >= 768px) {
+  .about__icons-wrapper::before {
+    width: 125px;
+  }
+}
+.about__icons-wrapper::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(193, 159, 251, 0), rgb(193, 159, 251));
+  content: " ";
+  z-index: 10;
+}
+@media (width >= 768px) {
+  .about__icons-wrapper::after {
+    width: 125px;
+  }
+}
+.about__icons {
+  width: -webkit-max-content;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+}
+.about__icons:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+.about__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 75px;
+  margin: 0 16px;
+  background-color: #FDFDFD;
+  border-radius: 10px;
+  transition-property: scale, -webkit-transform;
+  transition-property: scale, transform;
+  transition-property: scale, transform, -webkit-transform;
+  transition-duration: 300ms;
+}
+.about__icon:hover {
+  scale: 1.1;
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+  z-index: 10;
+}
+.about__icon-image {
+  width: 3.125rem;
+}
+
+.about__section--tools {
+  overflow: hidden;
+}
+@media (width >= 768px) {
+  .about__section--tools {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+.about__text--tools {
+  margin-bottom: 75px;
+}
+
+.about__section--tools .about__icons .about__icon:nth-child(2) .about__icon-image {
+  width: auto;
+  height: 50px;
+}
+.about__section--tools .about__icons .about__icon:nth-child(5) .about__icon-image {
+  width: auto;
+  height: 50px;
 }
