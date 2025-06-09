@@ -259,6 +259,143 @@
             </article>
         </section>
     </main>
+
+    <section class="contact">
+        <div class="contact__header">
+            <h1 class="contact__title">Contáctame</h1>
+        </div>
+
+        <div class="contact__content contenedor">
+            <!-- Información de contacto -->
+
+            <div class="contact__info">
+
+                <h2 class="contact__info-title">¿Necesitas ayuda?</h2>
+
+                <div class="contact__info-list">
+                    <!-- Item: Ubicación -->
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">
+                            <img src="build/assets/icons/map-pin.svg" alt="Ícono de ubicación"
+                                class="contact__icon-img">
+                        </div>
+                        <div class="contact__info-text">
+                            <h3 class="contact__info-label">Ubicación</h3>
+                            <a href="#" class="contact__info-link">Av. Los Santos 0-18 - Zona 7 Quetzaltenango</a>
+                        </div>
+                    </div>
+
+                    <!-- Item: Email -->
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">
+                            <img src="build/assets/icons/mail.svg" alt="Ícono de correo" class="contact__icon-img">
+                        </div>
+                        <div class="contact__info-text">
+                            <h3 class="contact__info-label">Correo Electrónico</h3>
+                            <a href="mailto:carlos@carlos.com" class="contact__info-link">carlos@carlos.com</a>
+                        </div>
+                    </div>
+
+                    <!-- Item: Teléfono -->
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">
+                            <img src="build/assets/icons/whatsapp.svg" alt="Ícono de teléfono"
+                                class="contact__icon-img">
+                        </div>
+                        <div class="contact__info-text">
+                            <h3 class="contact__info-label">Teléfono / WhatsApp</h3>
+                            <a href="tel:+50245871655" class="contact__info-link">+502 4587 - 1655</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="contact__social">
+                    <h2 class="contact__social-title">Mis Redes Sociales</h2>
+
+                    <div class="contact__social-list">
+                        <!-- Facebook -->
+                        <div class="contact__social-item">
+                            <div class="contact__social-icon">
+                                <img src="build/assets/icons/facebook.svg" alt="Ícono de Facebook"
+                                    class="contact__icon-img">
+                            </div>
+                            <div class="contact__social-text">
+                                <a href="#" class="contact__social-link">Facebook</a>
+                            </div>
+                        </div>
+
+                        <!-- Instagram -->
+                        <div class="contact__social-item">
+                            <div class="contact__social-icon">
+                                <img src="build/assets/icons/instagram.svg" alt="Ícono de Instagram"
+                                    class="contact__icon-img">
+                            </div>
+                            <div class="contact__social-text">
+                                <a href="#" class="contact__social-link">Instagram</a>
+                            </div>
+                        </div>
+
+                        <!-- LinkedIn -->
+                        <div class="contact__social-item">
+                            <div class="contact__social-icon">
+                                <img src="build/assets/icons/linkedin.svg" alt="Ícono de LinkedIn"
+                                    class="contact__icon-img">
+                            </div>
+                            <div class="contact__social-text">
+                                <a href="#" class="contact__social-link">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario de contacto -->
+            <div class="contact__form-wrapper">
+                <form action="#" class="contact__form">
+                    <fieldset class="contact__form-fieldset">
+                        <legend class="contact__form-title">Deja un mensaje y conéctate conmigo</legend>
+
+                        <div class="contact__form-group">
+                            <label for="nombre" class="contact__form-label">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-group">
+                            <label for="asunto" class="contact__form-label">Asunto</label>
+                            <select id="asunto" name="asunto" required class="contact__form-select">
+                                <option value="" disabled selected>--Selecciona un servicio--</option>
+                                <option value="diseno-web">Diseño Web</option>
+                                <option value="desarrollo-web">Desarrollo Web</option>
+                                <option value="branding">Branding e Identidad</option>
+                                <option value="optimizacion">Optimización de sitios (SEO / Performance)</option>
+                                <option value="tiendas-online">E-commerce / Tiendas Online</option>
+                                <option value="mantenimiento">Mantenimiento Web</option>
+                                <option value="asesoria">Asesoría y Consultoría</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="contact__form-group">
+                            <label for="email" class="contact__form-label">Email</label>
+                            <input type="email" id="email" name="email" required class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-group">
+                            <label for="mensaje" class="contact__form-label">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" class="contact__form-textarea" required></textarea>
+                        </div>
+
+                        <div class="contact__form-group">
+                            <button type="submit" class="contact__form-submit">Enviar</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
     <script src="build/js/app.js"></script>
 </body>
 
